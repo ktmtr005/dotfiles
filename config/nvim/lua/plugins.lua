@@ -36,12 +36,6 @@ else
             end,
         },
         {
-            "folke/tokyonight.nvim",
-            lazy = false,
-            priority = 1000,
-            opts = {},
-        },
-        {
             "ntk148v/habamax.nvim",
             dependencies = {
                 "rktjmp/lush.nvim"
