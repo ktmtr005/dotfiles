@@ -6,6 +6,23 @@ if vim.g.vscode then
 
             },
             lazy = false,
+        },
+        {
+            'windwp/nvim-autopairs',
+            event = "InsertEnter",
+            config = true
+            -- use opts = {} for passing setup options
+            -- this is equalent to setup({}) function
+        },
+        {
+            "kylechui/nvim-surround",
+            version = "*",
+            event = "VeryLazy",
+            config = function()
+                require("nvim-surround").setup({
+                    -- Configuration here, or leave empty to use defaults
+                })
+            end
         }
     }
 else
@@ -40,6 +57,16 @@ else
             dependencies = {
                 "rktjmp/lush.nvim"
             }
+        },
+        {
+            "kylechui/nvim-surround",
+            version = "*",
+            event = "VeryLazy",
+            config = function()
+                require("nvim-surround").setup({
+                    -- Configuration here, or leave empty to use defaults
+                })
+            end
         }
     }
 end

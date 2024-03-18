@@ -1,4 +1,3 @@
-vim.opt.virtualedit = "onemore"
 vim.opt.swapfile = false
 
 if not vim.g.vscode then
