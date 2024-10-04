@@ -1,0 +1,6 @@
+[date]
+label=
+command=date +'%m/%d(%a) %H:%M'
+color=#8fa1b3
+interval=1
+
