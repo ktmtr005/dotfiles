@@ -4,6 +4,10 @@ promptinit
 
 prompt walters
 
+# keybind
+bindkey ";5C" forward-word
+bindkey ";5D" backward-word
+
 # sheldon
 eval "$(sheldon source)"
 
