@@ -1,12 +1,31 @@
+# completion
 autoload -Uz compinit promptinit
 compinit
 promptinit
 
-prompt walters
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# history
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+setopt share_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
+setopt inc_append_history
 
 # keybind
+bindkey -e
 bindkey ";5C" forward-word
 bindkey ";5D" backward-word
+
+# alias
+alias ll='ls -l'
+alias la='ls -a'
+alias lh='ls -lh'
 
 # sheldon
 eval "$(sheldon source)"
