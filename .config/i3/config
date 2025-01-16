@@ -246,6 +246,9 @@ exec --no-startup-id "picom  -b"
 # wallpaper
 exec --no-startup-id ~/.fehbg
 
+# start bluebery app for managing bluetooth devices from tray:
+exec --no-startup-id blueberry-tray
+
 # gaps
 gaps top 5
 gaps bottom 5
