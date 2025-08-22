@@ -21,4 +21,8 @@ if not vim.g.vscode then
 
 -- nvim-lspconfig
     vim.lsp.enable('lua-ls')
+    vim.lsp.enable('vimls')
+    vim.lsp.enable('html')
+    vim.lsp.enable('cssls')
+    vim.lsp.enable('pyright')
 end
