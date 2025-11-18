@@ -20,9 +20,10 @@ if not vim.g.vscode then
     vim.cmd("colorscheme habamax.nvim")
 
 -- nvim-lspconfig
-    vim.lsp.enable('lua-ls')
+    vim.lsp.enable('lua_ls')
     vim.lsp.enable('vimls')
     vim.lsp.enable('html')
     vim.lsp.enable('cssls')
     vim.lsp.enable('pyright')
+    vim.lsp.enable('ts_ls')
 end
