@@ -1,3 +1,5 @@
+is_windows = vim.fn.has("win32") == 1
+
 if vim.g.vscode then
     return {
         {
@@ -75,7 +77,13 @@ else
             "nvim-treesitter/nvim-treesitter",
             build = ":TSUpdate",
             config = function ()
-                local configs = require("nvim-treesitter.configs")
+                local configs = nil
+                if is_windows then
+                    configs = require("nvim-treesitter.config")
+
+                else
+                    configs = require("nvim-treesitter.configs")
+                end
 
                 configs.setup({
                     sync_install = false,
