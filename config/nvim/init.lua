@@ -26,4 +26,15 @@ if not vim.g.vscode then
     vim.lsp.enable('cssls')
     vim.lsp.enable('pyright')
     vim.lsp.enable('ts_ls')
+    vim.lsp.enable('tinymist')
+
+    vim.lsp.config("lua_ls", {
+        settings = {
+            Lua = {
+                diagnostics = {
+                    globals = {"vim"}
+                }
+            }
+        }
+    })
 end
