@@ -55,3 +55,7 @@ cached_paths=(
 
 path=(${cached_paths} ${path})
 export PATH
+
+# Syntax highlighting settings for less command
+export LESS="-R"
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
