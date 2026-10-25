@@ -133,7 +133,7 @@ else
         {
             "kaarmu/typst.vim",
             ft = "typst",
-            lazy="false",
+            lazy= false,
         },
         {
           'chomosuke/typst-preview.nvim',

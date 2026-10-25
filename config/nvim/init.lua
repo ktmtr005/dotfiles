@@ -37,4 +37,14 @@ if not vim.g.vscode then
             }
         }
     })
+    vim.lsp.config('tinymist', {
+        cmd = { 'tinymist' },
+        filetypes = { 'typst' },
+        settings = {
+            formatterMode = 'typstyle',
+            exportPdf = 'onType',
+            semanticTokens = 'enable',
+            projectResolution = 'singleFile',
+        }
+    })
 end
