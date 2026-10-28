@@ -74,30 +74,6 @@ else
             "neovim/nvim-lspconfig"
         },
         {
-            "nvim-treesitter/nvim-treesitter",
-            build = ":TSUpdate",
-            config = function ()
-                local configs = nil
-                if is_windows then
-                    configs = require("nvim-treesitter.config")
-
-                else
-                    configs = require("nvim-treesitter.configs")
-                end
-
-                configs.setup({
-                    sync_install = false,
-                    highlight = { enable = true },
-                    indent = { enable = true },
-                })
-            end
-        },
-        {
-            "MeanderingProgrammer/render-markdown.nvim",
-            dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
-            opts = {},
-        },
-        {
             "hrsh7th/nvim-cmp",
             dependencies = {
                 "hrsh7th/cmp-nvim-lsp",
