@@ -3,13 +3,6 @@ is_windows = vim.fn.has("win32") == 1
 if vim.g.vscode then
     return {
         {
-            "numToStr/Comment.nvim",
-            opts = {
-
-            },
-            lazy = false,
-        },
-        {
             'windwp/nvim-autopairs',
             event = "InsertEnter",
             config = true
@@ -35,13 +28,6 @@ else
             config = true
             -- use opts = {} for passing setup options
             -- this is equalent to setup({}) function
-        },
-        {
-            "numToStr/Comment.nvim",
-            opts = {
-
-            },
-            lazy = false,
         },
         {
             "nvim-tree/nvim-tree.lua",
