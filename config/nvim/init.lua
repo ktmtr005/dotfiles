@@ -17,6 +17,7 @@ if not vim.g.vscode then
     vim.opt.listchars = { tab = ">-", trail = "-" }
     vim.opt.completeopt = "menuone"
     vim.opt.termguicolors = true
+    vim.opt.exrc = true
     vim.cmd("colorscheme habamax.nvim")
 
 -- nvim-lspconfig
