@@ -20,32 +20,45 @@ if not vim.g.vscode then
     vim.opt.exrc = true
     vim.cmd("colorscheme habamax.nvim")
 
--- lsp (builtin)
-    vim.lsp.enable('lua_ls')
-    vim.lsp.enable('vimls')
-    vim.lsp.enable('html')
-    vim.lsp.enable('cssls')
-    vim.lsp.enable('pyright')
-    vim.lsp.enable('ts_ls')
-    vim.lsp.enable('tinymist')
+    -- lsp (builtin)
+    vim.lsp.enable("lua_ls")
+    vim.lsp.enable("vimls")
+    vim.lsp.enable("html")
+    vim.lsp.enable("cssls")
+    vim.lsp.enable("pyright")
+    vim.lsp.enable("ts_ls")
+    vim.lsp.enable("tinymist")
 
     vim.lsp.config("lua_ls", {
         settings = {
             Lua = {
                 diagnostics = {
-                    globals = {"vim"}
-                }
-            }
-        }
+                    globals = { "vim" },
+                },
+            },
+        },
     })
-    vim.lsp.config('tinymist', {
-        cmd = { 'tinymist' },
-        filetypes = { 'typst' },
+    vim.lsp.config("tinymist", {
+        cmd = { "tinymist" },
+        filetypes = { "typst" },
         settings = {
-            formatterMode = 'typstyle',
-            exportPdf = 'onType',
-            semanticTokens = 'enable',
-            projectResolution = 'singleFile',
-        }
+            formatterMode = "typstyle",
+            exportPdf = "onType",
+            semanticTokens = "enable",
+            projectResolution = "singleFile",
+        },
+    })
+
+    -- confort.nvim
+    require("conform").setup({
+        formatters_by_ft = {
+            lua = { "stylua" },
+            -- Conform will run multiple formatters sequentially
+            python = { "isort", "black" },
+            -- You can customize some of the format options for the filetype (:help conform.format)
+            rust = { "rustfmt", lsp_format = "fallback" },
+            -- Conform will run the first available formatter
+            javascript = { "prettierd", "prettier", stop_after_first = true },
+        },
     })
 end
