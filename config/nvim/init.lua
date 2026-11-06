@@ -20,7 +20,7 @@ if not vim.g.vscode then
     vim.opt.exrc = true
     vim.cmd("colorscheme habamax.nvim")
 
--- nvim-lsp
+-- lsp (builtin)
     vim.lsp.enable('lua_ls')
     vim.lsp.enable('vimls')
     vim.lsp.enable('html')
