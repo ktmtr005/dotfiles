@@ -45,7 +45,7 @@ if not vim.g.vscode then
             formatterMode = "typstyle",
             exportPdf = "onType",
             semanticTokens = "enable",
-            projectResolution = "singleFile",
+            projectResolution = "lockDatabase",
         },
     })
 
