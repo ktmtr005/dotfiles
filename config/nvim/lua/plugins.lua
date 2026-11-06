@@ -103,5 +103,8 @@ else
           version = '1.*',
           opts = {}, -- lazy.nvim will implicitly calls `setup {}`
         },
+        {
+            'lewis6991/gitsigns.nvim'
+        }
     }
 end
